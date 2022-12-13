@@ -10,7 +10,7 @@ class __add__data__:
             else:
                 value = ""
                 for x in range(Data.__len__()):
-                    if Data[x] == "|":
+                    if Data[x] == devided__tag:
                         value = value + cel__end__tag
                     else:
                         value = value + Data[x]

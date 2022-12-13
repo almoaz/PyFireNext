@@ -32,7 +32,7 @@ class __update__row__:
                                     updateData = "true"
                                     Data = ""
                                     for x2 in range(Update_Data.__len__()):
-                                        if Update_Data[x2] == "|":
+                                        if Update_Data[x2] == devided__tag:
                                             Data = Data + cel__end__tag
                                         else:
                                             Data = Data + Update_Data[x2]
@@ -46,7 +46,7 @@ class __update__row__:
                                     updateData = "true"
                                     Data = ""
                                     for x2 in range(Update_Data.__len__()):
-                                        if Update_Data[x2] == "|":
+                                        if Update_Data[x2] == devided__tag:
                                             Data = Data + cel__end__tag
                                         else:
                                             Data = Data + Update_Data[x2]

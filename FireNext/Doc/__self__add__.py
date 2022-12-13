@@ -138,11 +138,14 @@ class __self__add__:
                                         updateNDB = updateNDB + name + value1 + end__tag
                                         open(databaseName.__add__(".ndb"), "w").write(updateNDB)
                                     if childMatch == "false":
-                                        updateNDB = childData[:-1] + "," + name + value1 + end__tag
+                                        updateNDB = childData[:-1] + child__end__tag + name + value1 + end__tag
                                         open(databaseName.__add__(".ndb"), "w").write(updateNDB)
 
                     return "true"
         return "true"
 
     def __len__(self):
+        pass
+
+    def __add__(self, other):
         pass

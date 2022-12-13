@@ -9,7 +9,7 @@ class __add__col__name__:
             if table.__len__() == 0:
                 value = ""
                 for x in range(Column_Name.__len__()):
-                    if Column_Name[x] == "|":
+                    if Column_Name[x] == devided__tag:
                         value = value + cel__end__tag
                     else:
                         value = value + Column_Name[x]
@@ -32,9 +32,9 @@ class __add__col__name__:
                     elif table[x] == cel__end__tag and queryPermit == "false":
                         value1 = ""
                         for x1 in range(Column_Name.__len__()):
-                            if Column_Name[x1] != "|":
+                            if Column_Name[x1] != devided__tag:
                                 value1 = value1 + Column_Name[x1]
-                            elif Column_Name[x1] == "|":
+                            elif Column_Name[x1] == devided__tag:
                                 if value == value1:
                                     duplicateCondition = "true"
                                     if duplicateColumnName == "":
@@ -59,9 +59,9 @@ class __add__col__name__:
                     elif table[x] == col__end__tag and queryPermit == "false":
                         value1 = ""
                         for x1 in range(Column_Name.__len__()):
-                            if Column_Name[x1] != "|":
+                            if Column_Name[x1] != devided__tag:
                                 value1 = value1 + Column_Name[x1]
-                            elif Column_Name[x1] == "|":
+                            elif Column_Name[x1] == devided__tag:
                                 if value == value1:
                                     duplicateCondition = "true"
                                     if duplicateColumnName == "":

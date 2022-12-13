@@ -112,3 +112,6 @@ class __self__read__:
 
     def __len__(self):
         pass
+
+    def __add__(self, other):
+        pass

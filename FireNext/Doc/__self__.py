@@ -149,3 +149,6 @@ class __self__:
 
     def __add__(self, param):
         pass
+
+    def __len__(self):
+        pass

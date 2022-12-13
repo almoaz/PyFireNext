@@ -17,13 +17,13 @@ class __self__child__delete__:
                 value = ""
 
             if x == self.__len__() - 1:
-
                 if parent != "":
+
                     try:
                         dataBase = open(value + ".ndb", "r").read()
                     except:
                         return "'" + value + "' child not found"
-                    if dataBase == "[]" or dataBase == "":
+                    if dataBase == str(start__tag+end__tag) or dataBase == "":
                         __self__update__.__self__update__(parent[:-1], value)
                         os.remove(value + ".ndb")
                         return "true"
@@ -53,7 +53,7 @@ class __self__child__delete__:
                         dataBase = open(value + ".ndb", "r").read()
                     except:
                         return "'" + value + "' child not found"
-                    if dataBase == "[]" or dataBase == "":
+                    if dataBase == str(start__tag+end__tag) or dataBase == "":
 
                         os.remove(value + ".ndb")
                         return "true"
@@ -79,9 +79,7 @@ class __self__child__delete__:
                                     __self__child__delete__.__self__child__delete__1(value)
                                 os.remove(databaseName + ".ndb")
 
-
-
-        if parent!= "":
+        if parent != "":
             __self__update__.__self__update__(parent[:-1], databaseName)
         return "true"
 
@@ -100,7 +98,7 @@ class __self__child__delete__:
                     dataBase = open(value + ".ndb", "r").read()
                 except:
                     return "'" + value + "' child not found"
-                if dataBase == "[]" or dataBase == "":
+                if dataBase == str(start__tag+end__tag) or dataBase == "":
                     os.remove(value + ".ndb")
                     return "true"
                 else:
@@ -140,7 +138,7 @@ class __self__child__delete__:
                     dataBase = open(value + ".ndb", "r").read()
                 except:
                     return "'" + value + "' child not found"
-                if dataBase == "[]" or dataBase == "":
+                if dataBase == str(start__tag+end__tag) or dataBase == "":
                     os.remove(value + ".ndb")
                     return "true"
                 else:
@@ -166,4 +164,7 @@ class __self__child__delete__:
                             return "true"
 
     def __len__(self):
+        pass
+
+    def __add__(self, other):
         pass

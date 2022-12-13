@@ -65,6 +65,7 @@ class __self__delete__:
                     value = ""
 
             if x.__eq__(len(self) - 1):
+
                 if databaseName == "":
                     try:
                         open(value.__add__(".ndb"))
@@ -130,6 +131,7 @@ class __self__delete__:
                             name = ""
                             value1 = ""
                         if x1.__eq__(len(value) - 1):
+
                             if name == "":
                                 try:
                                     open(value.__add__(".ndb"))
@@ -171,7 +173,7 @@ class __self__delete__:
                                 if x2.__eq__(len(childData) - 1):
 
                                     if childMatch == "true":
-                                        if updateNDB == "[]":
+                                        if updateNDB == str(start__tag+end__tag):
                                             open(databaseName.__add__(".ndb"), "w").write(updateNDB)
                                             if parentDatabaseName == "":
                                                 parentDatabaseName = databaseName
@@ -186,7 +188,7 @@ class __self__delete__:
                                     if childMatch == "null":
                                         updateNDB = updateNDB + end__tag
 
-                                        if updateNDB == "[]":
+                                        if updateNDB == str(start__tag+end__tag):
                                             open(databaseName.__add__(".ndb"), "w").write(updateNDB)
                                             if parentDatabaseName == "":
                                                 parentDatabaseName = databaseName
@@ -202,7 +204,7 @@ class __self__delete__:
                                         notFoundChild = notFoundChild + "'" + name + "'"
 
                                         updateNDB = childData[:-1] + value1 + end__tag
-                                        if updateNDB == "[]":
+                                        if updateNDB == str(start__tag+end__tag):
                                             open(databaseName.__add__(".ndb"), "w").write(updateNDB)
                                             if parentDatabaseName == "":
                                                 parentDatabaseName = databaseName
@@ -218,4 +220,7 @@ class __self__delete__:
                     value = ""
 
     def __len__(self):
+        pass
+
+    def __add__(self, other):
         pass

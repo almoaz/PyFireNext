@@ -95,3 +95,6 @@ class __self__child__:
 
     def __len__(self):
         pass
+
+    def __add__(self, other):
+        pass
