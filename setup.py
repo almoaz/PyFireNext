@@ -20,8 +20,7 @@ setup(
     name='FireNext',
     version='1.0.1',
     description='This is an offline database library',
-    long_description=open('README.md').read() + '\n\n'+
-    open("CHANGELOG").read(),
+    long_description=open('README.md').read() + '\n\n' + open("CHANGELOG.txt").read(),
     url='https://github.com/almoaz/PyFireNext',
     license='MIT',
     classifiers='classifiers',
