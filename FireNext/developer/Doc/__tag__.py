@@ -1,13 +1,13 @@
-start__tag = "["
-end__tag = "]"
-line__tag = "---"
-child__end__tag = ","
-devided__tag = "|"
-value__child__tag = ":"
+col__start__tag = 'Á'
+col__end__tag = 'À'
+row__start__tag = 'É'
+row__end__tag = 'È'
+cel__end__tag = 'Ê'
 
-col__start__tag = "["
-col__end__tag = "]"
-row__start__tag = "("
-row__end__tag = ")"
-cel__end__tag = ","
+start__tag = 'Á'
+end__tag = 'À'
+line__tag = "---"
+child__end__tag = 'Ê'
+devided__tag = '|'
+value__child__tag = ':'
 
