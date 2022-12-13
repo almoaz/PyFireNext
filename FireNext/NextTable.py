@@ -1,3 +1,27 @@
+"""
+MIT License
+
+Copyright (c) 2022 Mahfuz Salehin Moaz
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+"""
+
 from FireNext import __delete__table__
 from FireNext import __create__table__
 from FireNext import __read__table__
@@ -48,7 +72,7 @@ class NextTable:
                |           |---name:Shamim
                |           |---email:xyz@xyz.com
 
-        :return converted result
+        :return true
         """
         return __convert__table__doc__.__convert__table__doc__(Table_Name, Column_Name)
 
@@ -79,7 +103,7 @@ class NextTable:
         183071009           Sharmin                xyz@xyz.com
 
 
-        :return Successful!
+        :return true
 
          Warning : When you delete a column, you los column data.
 
@@ -114,7 +138,7 @@ class NextTable:
         183071009           Sharmin                xyz@xyz.com
 
 
-        :return Successful!
+        :return true
 
         """
 
@@ -145,7 +169,7 @@ class NextTable:
         183071009           Sharmin                xyz@xyz.com
 
 
-        :return Successful!
+        :return true
 
          Warning : When you delete a row, you los this rows data.
 
@@ -179,7 +203,7 @@ class NextTable:
         183071009           Sharmin                xyz@xyz.com
 
 
-        :return Successful!
+        :return true
 
         """
         return __delete__data__.__delete__data__(Table_Name, Search_Id, Column_Name)
@@ -211,7 +235,7 @@ class NextTable:
         183071009           Sharmin                xyz@xyz.com
 
 
-        :return Successful!
+        :return true
 
         """
         return __update__data__.__update__data__(Table_Name, Search_Id, Column_Name, Update_Data)
@@ -329,6 +353,7 @@ class NextTable:
         -----------------------------------------------------------------
         183071009           Sharmin                xyz@xyz.com
 
+        :return table documents
         """
 
         return __read__table__.__read__table__(Table_Name)
@@ -358,7 +383,7 @@ class NextTable:
         183071008           Mithila Nisa           xyz@xyz.com
 
 
-        :return Successful!
+        :return true
 
         """
         return __add__data__.__add__data__(Table_Name, Data)
@@ -390,7 +415,7 @@ class NextTable:
         183071009           Sharmin                xyz@xyz.com
 
 
-        :return Successful!
+        :return true
 
         """
         return __delete__col__name__.__delete__col__name__(Table_Name, Column_Name)
@@ -422,7 +447,7 @@ class NextTable:
         183071009           Sharmin                xyz@xyz.com
 
 
-        :return Successful!
+        :return true
 
         """
         return __update__col__data__.__update__col__data__(Table_Name, Column_Name, Update_Column_Name)
@@ -482,7 +507,7 @@ class NextTable:
 
         #################################################################
 
-        :return successful!
+        :return true
 
         """
         return __add__col__name__.__add__col__name__(Table_Name, Column_Name)
@@ -507,7 +532,7 @@ class NextTable:
 
         When you create a table then you find a (tablename.nt) file .
 
-        :return: Successfully! create
+        :return: true
         """
 
         return __create__table__.__create__table__(Table_Name)
