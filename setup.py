@@ -16,7 +16,7 @@ classifiers = [
 
 setup(
     name='firenext',
-    version='1.0.0',
+    version='1.1.2',
     description='This is an offline database library.',
     long_description=open("README.md").read() + "\n\n" +
                      open("CHANGELOG.txt").read(),
