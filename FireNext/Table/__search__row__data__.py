@@ -27,19 +27,18 @@ class __search__row__data__:
 
                             elif value[x1] == cel__end__tag:
                                 if data == Search_Id:
-                                    Cell_Size = 0
                                     value2 = ""
                                     for x2 in range(value.__len__()):
                                         if value[x2] != cel__end__tag and value[x2] != row__start__tag and value[
                                             x2] != row__end__tag:
-                                            value2 = value2 + value[x2]
+                                            if value2 == "":
+                                                value2 = [value[x2]]
+                                            else:
+                                                value2.append(value[x2])
+
                                         elif value[x2] == cel__end__tag:
-                                            if value2.__len__() > Cell_Size:
-                                                Cell_Size = value2.__len__()
                                             value2 = ""
                                         elif value[x2] == row__end__tag:
-                                            if value2.__len__() > Cell_Size:
-                                                Cell_Size = value2.__len__()
                                             value2 = ""
                                     col_name = col_name + value
                                     value = ""
@@ -51,17 +50,19 @@ class __search__row__data__:
                                                 and col_name[x2] != row__start__tag and col_name[x2] != row__end__tag:
                                             value = value + col_name[x2]
                                         elif col_name[x2] == row__start__tag and value2 != "":
-                                            print(value2)
-                                            print(value.ljust(value2.__len__(), "-"))
                                             value2 = ""
 
                                         elif col_name[x2] == cel__end__tag:
-                                            value = value.ljust(Cell_Size + 3, " ")
-                                            value2 = value2 + value
+                                            if value2 == "":
+                                                value2 = [value]
+                                            else:
+                                                value2.append(value)
                                             value = ""
                                         elif col_name[x2] == col__end__tag or col_name[x2] == row__end__tag:
-                                            value = value.ljust(Cell_Size + 3, " ")
-                                            value2 = value2 + value
+                                            if value2 == "":
+                                                value2 = [value]
+                                            else:
+                                                value2.append(value)
                                             value = ""
                                         if x2 == col_name.__len__() - 1:
                                             return value2
@@ -71,19 +72,17 @@ class __search__row__data__:
                                     data = ""
                             elif value[x1] == row__end__tag:
                                 if data == Search_Id:
-                                    Cell_Size = 0
                                     value2 = ""
                                     for x2 in range(value.__len__()):
                                         if value[x2] != cel__end__tag and value[x2] != row__start__tag and value[
                                             x2] != row__end__tag:
-                                            value2 = value2 + value[x2]
+                                            if value2 == "":
+                                                value2 = [value[x2]]
+                                            else:
+                                                value2.append(value[x2])
                                         elif value[x2] == cel__end__tag:
-                                            if value2.__len__() > Cell_Size:
-                                                Cell_Size = value2.__len__()
                                             value2 = ""
                                         elif value[x2] == row__end__tag:
-                                            if value2.__len__() > Cell_Size:
-                                                Cell_Size = value2.__len__()
                                             value2 = ""
                                     col_name = col_name + value
                                     value = ""
@@ -95,17 +94,19 @@ class __search__row__data__:
                                                 and col_name[x2] != row__start__tag and col_name[x2] != row__end__tag:
                                             value = value + col_name[x2]
                                         elif col_name[x2] == row__start__tag and value2 != "":
-                                            print(value2)
-                                            print(value.ljust(value2.__len__(), "-"))
                                             value2 = ""
 
                                         elif col_name[x2] == cel__end__tag:
-                                            value = value.ljust(Cell_Size + 3, " ")
-                                            value2 = value2 + value
+                                            if value2 == "":
+                                                value2 = [value]
+                                            else:
+                                                value2.append(value)
                                             value = ""
                                         elif col_name[x2] == col__end__tag or col_name[x2] == row__end__tag:
-                                            value = value.ljust(Cell_Size + 3, " ")
-                                            value2 = value2 + value
+                                            if value2 == "":
+                                                value2 = [value]
+                                            else:
+                                                value2.append(value)
                                             value = ""
                                         if x2 == col_name.__len__() - 1:
                                             return value2
