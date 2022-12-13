@@ -12,7 +12,7 @@ FireNext is an offline database library.
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/almoaz/FireNext/blob/master/LICENSE)
     
 ## Version 
-1.1.2
+1.1.1
 
 ## Installation
 ```
