@@ -25,7 +25,7 @@ FireNext works with two types of offline databases. Table type and Document type
 
 ## NextTable
 
-```bash
+```
 id                  name                   phone 
 ------------------------------------------------------------
 18301               Mithila Mithi          019XXXXXXXX
@@ -38,7 +38,7 @@ id                  name                   phone
 
 ## NextDatabase
 
-```bash
+```
 USER
    |---18301
    |       |---name:Mithila Nisa
@@ -58,25 +58,15 @@ USER
 
 ## Documentation
 
-- [NextTable (Python)](https://github.com/almoaz/FireNext/blob/master/NextTable.md)
-- [NextDatabase (Python)](https://github.com/almoaz/FireNext/blob/master/NextDatabase.md)
+- [NextTable (Python)](https://github.com/almoaz/PyFireNext/blob/master/NextTable.md)
+- [NextDatabase (Python)](https://github.com/almoaz/PyFireNext/blob/master/NextDatabase.md)
 
 
 
 ## Restiction
 
 Please do not use these characters in your documents.
-
-- " Á " this character means database start tag
-- " À " this character means database end tag
-- " É " this character means database start tag
-- " È " this character means database end tag
-- " Ê " this character means database end tag
-- " | " this character means add new data
-- " : " this character means valueChild
-
-"|" and ":" These character has its uses. You will find it in the documentation.
-
+[Click for read](https://github.com/almoaz/PyFireNext/blob/master/Restriction.md)
 
 ## Having problems?
 
