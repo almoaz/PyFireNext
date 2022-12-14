@@ -41,9 +41,10 @@ class __self__update__:
                                 updateNDB = updateNDB[:-1] + end__tag
                                 open(parentValue.__add__(".ndb"), "w").write(updateNDB)
 
-                            if updateNDB == str(start__tag+end__tag):
+                            if updateNDB == start__tag+""+end__tag:
                                 os.remove(parentValue + ".ndb")
-                                __self__update__.__self__update__1(parent1[:-1], parentValue)
+                                if parent1 != "":
+                                    __self__update__.__self__update__1(parent1[:-1], parentValue)
                         else:
                             updateNDB = updateNDB + value + end__tag
                             open(parentValue.__add__(".ndb"), "w").write(updateNDB)
@@ -84,9 +85,10 @@ class __self__update__:
                                 updateNDB = updateNDB[:-1] + end__tag
                                 open(parentValue.__add__(".ndb"), "w").write(updateNDB)
 
-                            if updateNDB == str(start__tag+end__tag):
+                            if updateNDB == start__tag+""+end__tag:
                                 os.remove(parentValue + ".ndb")
-                                __self__update__.__self__update__(parent1[:-1], parentValue)
+                                if parent1 != "":
+                                    __self__update__.__self__update__(parent1[:-1], parentValue)
                         else:
                             updateNDB = updateNDB + value + end__tag
                             updateNDB = open(parentValue.__add__(".ndb"), "w").write(updateNDB)
