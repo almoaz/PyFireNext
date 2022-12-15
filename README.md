@@ -14,6 +14,10 @@ FireNext is an offline database library.
 ## Version 
 1.0.2
 
+## Badges
+
+[1.0.2![](https://pypi.org/static/images/logo-small.95de8436.svg)](https://pypi.org/project/firenext/)
+
 ## Installation
 ```
 pip install firenext
