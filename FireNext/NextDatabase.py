@@ -3,10 +3,11 @@ from FireNext import __self__read__
 from FireNext import __self__child__
 from FireNext import __self__query__
 from FireNext import __self__delete__
+from FireNext import __self__check__
 
 
 class NextDatabase:
-    def add(self):
+    def add(path):
         """
            print(NextDatabase.add_data("USER>001>name:Mahfuz Salehin Moaz|age:26|nationality:Bangladesh"))
            output :
@@ -56,9 +57,17 @@ class NextDatabase:
                |     |---nationality:Bangladesh
            ----------------------------------------------
         """
-        return __self__add__.__self__add__(self)
+        check = __self__check__.__self__check__(path, "add")
+        if check == "child":
+            return "value child not found"
+        if check == "parent":
+            return "parent not found"
+        if check == "syntax":
+            return "'error' "+path
 
-    def read(self):
+        return __self__add__.__self__add__(check)
+
+    def read(path):
         """
            print(NextDatabase.read("USER>001>name:"))
            output : Mahfuz Salehin Moaz
@@ -91,9 +100,14 @@ class NextDatabase:
              |---nationality:Bangladesh
            ---------------------------------
         """
-        return __self__read__.__self__read__(self)
+        check = __self__check__.__self__check__(path, "child")
+        if check == "child":
+            return "value child not found"
+        if check == "syntax":
+            return "'error' " + path
+        return __self__read__.__self__read__(check)
 
-    def hasChild(self):
+    def hasChild(path):
         """
            print(NextDatabase.hasChild("USER>001>name:"))
            output : true
@@ -114,9 +128,14 @@ class NextDatabase:
                |     |---nationality:Bangladesh
            ----------------------------------------------
         """
-        return __self__child__.__self__child__(self)
+        check = __self__check__.__self__check__(path, "child")
+        if check == "child":
+            return "value child not found"
+        if check == "syntax":
+            return "'error' " + path
+        return __self__child__.__self__child__(check)
 
-    def query(self):
+    def query(path):
         """
            child = NextDatabase.query("USER>name:")
            output : [001,002,003]
@@ -145,9 +164,16 @@ class NextDatabase:
                |     |---nationality:Bangladesh
            ----------------------------------------------
         """
-        return __self__query__.__self__query__(self)
+        check = __self__check__.__self__check__(path, "query")
+        if check == "child":
+            return "value child not found"
+        if check == "parent":
+            return "parent not found"
+        if check == "syntax":
+            return "'error' " + path
+        return __self__query__.__self__query__(path)
 
-    def delete(self):
+    def delete(path):
         """
            print(NextDatabase.read_data("USER>001>name:"))
            output:
@@ -181,5 +207,10 @@ class NextDatabase:
                |     |---nationality:Bangladesh
            ----------------------------------------------
         """
-        return __self__delete__.__self__delete__(self)
+        check = __self__check__.__self__check__(path, "delete")
+        if check == "child":
+            return "value child not found"
+        if check == "syntax":
+            return "'error' " + path
+        return __self__delete__.__self__delete__(check)
 

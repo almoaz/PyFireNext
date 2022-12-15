@@ -3,6 +3,7 @@ from FireNext.Doc.__self__read__ import __self__read__
 from FireNext.Doc.__self__child__ import __self__child__
 from FireNext.Doc.__self__delete__ import __self__delete__
 from FireNext.Doc.__self__query__ import __self__query__
+from FireNext.Doc.__self__check__ import __self__check__
 
 from FireNext.Table.__delete__table__ import __delete__table__
 from FireNext.Table.__create__table__ import __create__table__
